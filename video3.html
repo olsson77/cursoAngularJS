@@ -1,0 +1,24 @@
+<!doctype html>
+<!--"Inicializacion aplicacion Angular JS"-->
+<html ng-app>
+
+	<head>
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+		
+	</head>
+	<body>
+		<h1>Exprsiones Angular JS</h1>
+		<!--Insertamos la expresion entre {{ expresion }}-->
+		<p>{{'hola'}}</p>
+		<!--Uso de filtros utilizamos | + filtro  Se usa para dar formatos a los datos.-->
+		<h1>Uso de filtros</h1>
+		<ul>
+			<li>Apio {{50 | currency}}</li>
+			<li>Brocoli {{ 50 | currency:"€"}}</li>
+			<li>Espinaca {{ 50 + 10 | currency:"€" }} importada de {{'InDIA' | lowercase  }}</li>
+		</ul>
+	
+	</body>
+</html>
