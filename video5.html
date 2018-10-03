@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app>
+
+	<head>
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+		
+	</head>
+
+	<body >
+		<!--En angular los modelos son elementos donde almacemos los datos de una aplicacion-->
+		<label>Nombre:</label>
+		<input type="text" ng-model="nombre"/>
+		
+		<div class="tarjeta">
+			<h2>Mi nombre es</h2>
+			<h1>{{nombre}}</h1>	
+		</div>		
+		
+	</body>
+
+	
+
+	
+
+</html>
