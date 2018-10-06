@@ -11,10 +11,16 @@
 	<body>
 		<h1>Curso Angular JS</h1>
 		<ul>
-			<li id="3">Expresiones en AngularJS</li>
-			<li id="4">Directivas en AngularJS</li>
-			<li id="5">Manipulacion de datos</li>
-			<li></li>
+			<li id="3" class="listado">Expresiones en AngularJS</li>
+			<li id="4" class="listado">Directivas en AngularJS</li>
+			<li id="5" class="listado">Manipulacion de datos</li>
+			<li >Controladores AngularJS
+				<ul>
+					<li id="6" class="listado">Controladores en AngularJS</li>
+					<li id="6_1" class="listado">Multiples controladores AngularJS</li>
+					<li id="6_2" class="listado">Crear metodos en un controlador</li>
+				</ul>	
+			</li>						 
 			<li></li>
 			<li></li>
 		</ul>
@@ -22,28 +28,13 @@
 
 	
 	<script type="text/javascript">
-		$( document ).ready(function() {
+		$( document ).ready(function() {			
 			
-			$("#3").click(function(){
-			
-				
-				$(location).attr('href', 'video3.html');
-			
+			$(".listado").click(function(){			
+				var id=($(this).attr("id"));
+				var video = "video"+id+".html";
+				$(location).attr('href',''+video+'');
 			});
-			
-			$("#4").click(function(){
-			
-				$(location).attr('href', 'video4.html');
-			
-			});
-			
-			$("#5").click(function(){
-			
-				$(location).attr('href', 'video5.html');
-			
-			});
-			
-			
 			
 			
 		});	

@@ -1,0 +1,47 @@
+<!doctype html>
+<!--Asignamos un nombre a nuestra app"-->
+<html ng-app="tiendaDeFruta">
+
+	<head>
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+		
+	</head>
+
+	<body >
+		
+	<div ng-controller="controlador">	
+		<!--Incluir un controladou-->
+		<h1>Promoción de mangos</h1>
+		<h2>2.15€ cada uno</h2>
+	
+		<label>Cantidad de mangos:</label>
+		<input type="text" ng-model="cantidad" />
+	
+		<br/>
+		Precio Total:{{cantidad*precio | currency:"€"}} 
+	</div>
+		
+	</body>
+
+	<script type="text/javascript">
+	
+		/*Definimos nuestro modulo*/		
+		var miAplicacion = angular.module('tiendaDeFruta',[]);
+		/*Creamos una instancia de nuestro modulo*/
+		miAplicacion.controller("controlador",['$scope',function($scope){
+		/*Aqui estara todo el codigo de mi controlador*/
+			$scope.cantidad = 0
+			$scope.precio = 2.15
+		
+		}]);
+		
+	
+	
+	
+	</script>
+
+	
+
+</html>
