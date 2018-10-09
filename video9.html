@@ -1,0 +1,79 @@
+<!doctype html>
+<!--Asignamos un nombre a nuestra app"-->
+<html ng-app="nombreApp">
+
+	<head>
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+		<style>
+		
+			.angular{background:red;color:white}
+		
+		
+		
+		</style>
+		
+	</head>
+
+	<body >
+		<div ng-controller="controlador1">
+			
+			<div class="contenedor">
+				<!--"ng-style para aplicar  estilos AngularJS--><!--ng-class aplica los estilos de una clase con AngularJS-->	
+				<p ng-style="estilos">Yo controlo es <span ng-class="claseEspecial">estilo CCS</span></p>
+			</div>
+			
+			<button ng-click="cambiarPropiedades()">Cambiar propiedades</button>
+			<button ng-click="cambiarClases()">Cambiar clases</button>
+			<button ng-click="reinicarClases()">Reiniciar clases</button>
+			
+			
+		</div>
+		
+		
+	</body>
+
+	<script type="text/javascript">
+	
+		<!--Defino el modulo-->
+		var miAplicacion = angular.module('nombreApp',[]);
+		
+		<!--Instancio el modulo y creo el controlador-->
+		miAplicacion.controller('controlador1',['$scope',function($scope){
+		<!--Acciones a realizar dentro de este controlador-->		
+
+			
+			/*Definimos un metodo para cambiar los estilos*/
+			$scope.cambiarPropiedades = function(){
+			
+				$scope.estilos = {"background":"blue","color":"green"}
+			
+			};
+			
+			/*Definimos un metodo que utilizar una clase CCS*/
+			$scope.cambiarClases = function(){
+			
+				$scope.claseEspecial = "angular"
+						
+			}
+			
+			
+			/*Modificamos el valor de las variables creadas para difinir los estilos*/
+			$scope.reinicarClases = function(){
+			
+				$scope.estilos = ""
+				$scope.claseEspecial = ""	
+			
+			}
+			
+			
+		
+		}]);
+	
+	
+	</script>
+
+	
+
+</html>
